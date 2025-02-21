@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undangan Pernikahan</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .hero {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: url('bg.jpg') no-repeat center center/cover;
+        }
+
+        .btn {
+            background: #ff5f5f;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #e04d4d;
+        }
+
+        #home {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f8f9fa;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .audio-icon-wrapper {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: none;
+        }
+
+        .bi {
+            font-size: 30px;
+        }
+
+        .bi-spin {
+            animation: spin 2s linear infinite;
+        }
+
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Bagian Cover Undangan -->
+    <div class="hero">
+        <h1>Undangan Pernikahan</h1>
+        <p>Nama Pengantin</p>
+        <button class="btn" id="openInvitation">
+            <i class="bi bi-envelope-fill"></i> Buka Undangan
+        </button>
+    </div>
+
+    <!-- Bagian Isi Undangan -->
+    <div id="home">
+        <h2>Selamat Datang di Undangan Kami</h2>
+    </div>
+
+    <!-- Ikon Musik -->
+    <div class="audio-icon-wrapper" id="musicIcon" onclick="toggleAudio()">
+        <i class="bi bi-disc"></i>
+    </div>
+
+    <!-- Audio -->
+    <audio id="song" loop>
+        <source src="audio/Westlife.mp3" type="audio/mp3">
+    </audio>
+
+    <script>
+        const song = document.getElementById("song");
+        const musicIcon = document.getElementById("musicIcon");
+        const musicIconElement = document.querySelector(".audio-icon-wrapper i");
+        let isPlaying = false;
+
+        document.getElementById("openInvitation").addEventListener("click", function () {
+            document.documentElement.style.scrollBehavior = "smooth";
+            document.getElementById("home").style.opacity = "1";
+            playAudio();
+        });
+
+        function playAudio() {
+            if (!isPlaying) {
+                song.volume = 0.5;
+                song.play();
+                isPlaying = true;
+                musicIcon.style.display = "flex";
+                updateIcon(true);
+            }
+        }
+
+        function toggleAudio() {
+            if (song.paused) {
+                song.play();
+                updateIcon(true);
+            } else {
+                song.pause();
+                updateIcon(false);
+            }
+        }
+
+        function updateIcon(playing) {
+            if (playing) {
+                musicIconElement.classList.remove("bi-pause-circle");
+                musicIconElement.classList.add("bi-disc", "bi-spin");
+            } else {
+                musicIconElement.classList.remove("bi-disc", "bi-spin");
+                musicIconElement.classList.add("bi-pause-circle");
+            }
+        }
+    </script>
+
+</body>
+</html>

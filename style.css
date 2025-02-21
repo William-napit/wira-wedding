@@ -1,0 +1,38 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+}
+.slider {
+    position: relative;
+    width: 90%;
+    max-width: 600px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+.slides {
+    display: flex;
+    width: 200%; /* Gandakan untuk looping yang mulus */
+    animation: slide 10s linear infinite;
+}
+.slides img {
+    width: 16.66%; /* Sesuai jumlah gambar untuk looping */
+    flex: none;
+    max-height: 300px;
+    object-fit: cover;
+}
+@keyframes slide {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); } /* Bergeser setengah karena ada duplikasi */
+}
+@media (max-width: 768px) {
+    .slider {
+        width: 95%;
+    }
+}

@@ -1,0 +1,1150 @@
+:root {
+    --pink:#f14e95; 
+    --bg:#0a0a0a; 
+    --shadow : 0 2px 2px rgb(0 0 0 / 0.5);
+}
+
+html, body {
+    overflow-x: hidden;
+    width: 100vw;
+   
+
+}
+
+body{
+    font-size: 1.2rem;
+    font-family:'cambria', sans-serif;
+    scroll-behavior: smooth;
+   overflow-x: hidden;
+   
+}
+
+section main{
+/*    display: inline-block;*/
+    position: absolute;
+    bottom: 0px;
+    padding-bottom: 150px;
+}
+.loading {
+     height: 100vh;
+     width:100% ;
+  
+}
+
+.myloading{
+    width: auto;
+    text-align: center;
+    margin-top: 70%;
+}
+/* Tulisan "Open" */
+        .loading-text {
+            font-size: 70px;
+            font-family: 'Allura', cursive;
+            color: #2E3A5D;
+        }
+
+        /* Efek Loading untuk "INVITATION" */
+        .loading-subtext {
+            font-size: 30px;
+            font-weight: bold;
+            letter-spacing: 3px;
+            position: relative;
+            color: #d0d0d0; /* Warna abu-abu awal */
+            overflow: hidden;
+        }
+
+        /* Pseudo-element untuk efek warna berjalan */
+        .loading-subtext::after {
+            content: "INVITATION";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 0%;
+            overflow: hidden;
+            color: #2E3A5D; /* Warna biru tua */
+            white-space: nowrap;
+            animation: loadingText 7s linear forwards;
+        }
+
+        /* Efek Fade In untuk "PLEASE WAIT" */
+        .loading-wait {
+            font-size: 14px;
+            letter-spacing: 2px;
+            color: #A0A0A0;
+            opacity: 0;
+            animation: fadeIn 1s ease forwards;
+        }
+
+        /* Animasi Fade In */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Animasi Warna Loading dari Kiri ke Kanan */
+        @keyframes loadingText {
+            from { width: 0%; }
+            to { width: 100%; }
+        }
+
+
+/*     progres bar   */
+.progress-bar {
+            width: 100%;
+            height: 10px;
+            border-radius: 5px;
+            overflow: hidden;
+            margin-top: 20px;
+        }
+
+        .progress {
+            width: 0%;
+            height: 100%;
+            background: #ff5733;
+            transition: width 1s linear;
+        }
+
+        .progress-container {
+            width: 80%;
+            max-width: 400px;
+            height: 10px;
+            background: #444;
+            border-radius: 5px;
+            overflow: hidden;
+            margin-top: 10px;
+        }
+
+        /* Hilangkan loading saat selesai */
+        /*#loading-screen.hidden {
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
+        }*/
+
+        /* Konten Website */
+        .content {
+            display: block;
+            text-align: center;
+            position: absolute;
+            height: 100vh;
+            left: -1000px;
+            top: 0;
+            width: 100%;
+            z-index: 10;
+        }
+
+        .content #openInvitation {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 300;
+            width: 200px; /* Sesuaikan ukuran */
+            height: 50px;
+            box-shadow: 0px 4px 6px rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            font-family: "EB Garamond", serif;
+        }
+
+.hero::before{
+    content: '';
+     position: absolute;
+     top: 0;
+     left: 0;
+     height: 100%;
+     width: 100%;
+     background-image: url(img/WIRAMEDAN.jpeg);
+     z-index: -1;
+     /* filter: grayscale(); */
+     background-position: center;
+     background-size: cover;
+}
+
+
+.hero{
+    position: relative;
+    min-height: 100vh;
+    background-color: rgba(27, 30, 31, 0.8);
+
+
+    
+}
+.hero h1{
+      font-family: "Allura", serif;
+        font-weight: 400;
+        font-size: 4rem;
+      
+}
+
+.hero h4{
+    font-family: "EB Garamond", serif;
+  
+}
+
+.hero h2{
+    font-family: "EB Garamond", serif;
+    font-size: 3rem;
+}
+.hero i{
+    margin-right: 1rem;
+}
+.hero a {
+    color: white;
+    background-color: #1B1E1F;
+    height: 40px;
+    box-shadow: 0 0px 6px white;
+    font-family: "Poppins", serif;
+  font-weight: 300;
+  font-style: normal;
+    
+}
+
+/*.hero a:hover{
+    background-color: var(--pink);
+    color: white;
+}*/
+
+.hero h1,
+.hero h4,
+.hero p{
+    text-shadow: var(--shadow);
+}
+
+
+
+.home{
+ 
+    min-height: 100vh;
+    padding-top: 0rem;
+    max-height: 100vh;
+/*    margin-top: 10rem;*/
+   
+    position:   relative    ;
+    z-index: 999;
+
+   
+
+}
+
+.home h2 {
+    position: absolute;
+            top: 10%;
+            left: 50%;
+            font-family: ;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            font-size: 32px;
+            font-weight: bold;
+            z-index: 10;
+             font-family: "Allura", serif;
+            
+}
+
+
+.home h3{
+    color: 444;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.home p{
+     font-size: 5rem;
+     font-family: "EB Garamond", serif;
+    font-weight: 800;
+    font-style: normal;
+    line-height: 0.9;
+    position: absolute;
+        top: 16%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        font-size: 32px;
+        font-weight: bold;
+        z-index: 10;
+}
+
+
+
+
+@keyframes backgroundAnim {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 100% 50%; }
+        }
+
+        .countdown-container {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+            position: absolute;
+            bottom  : 0;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            font-size: 32px;
+            font-weight: bold;
+            z-index:10;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color:  grey      ;
+             font-family: "EB Garamond", serif;
+        }
+
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .time-box {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            width: 80px;
+            height: 80px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+/*            box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);*/
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .time-box span {
+            font-size: 14px;
+            font-weight: normal;
+            margin-top: 5px;
+        }
+
+        .time-box:hover {
+            transform: scale(1.1);
+        }
+
+
+
+
+/*Gambar berjalan*/
+
+.slider {
+    overflow: hidden;
+}
+
+.slider-left {
+            position: relative;
+            width: 90%;
+            max-width: 600px;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+
+        }
+        .slides-left {
+            display: flex;
+            min-width: 700%; 
+            min-height: 100vh;
+            overflow: hidden;
+        
+        }
+        .slides-left img {
+            width: 15%; /* Dibagi sesuai jumlah gambar duplikasi */
+            flex: none;
+            min-height: 700px;
+            object-fit: cover;
+        }
+        .slides-left {
+            animation: slide-left 90s linear infinite;
+        }
+        @keyframes slide-left {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-75%); }
+        }
+      
+
+/*     slider-right   */
+
+#slider-right {
+            margin-top: -15rem;
+            width: 102%;
+            max-width: 600px;
+            overflow: hidden;
+            border-radius: 10px;
+/*            height: 100px;*/
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+
+           
+        }
+        .slides-right {
+            display: flex;
+            width: 600%; /* Sesuai jumlah gambar + duplikasi untuk efek seamless */
+            overflow: hidden;
+          
+        }
+        .slides-right img {
+            width: 15%; /* Dibagi sesuai jumlah gambar duplikasi */
+            flex: none;
+            max-height: 100px;
+            object-fit: cover;
+
+        }
+       
+        .slides-right {
+            animation: slide-right 9s linear infinite;
+        }
+        @keyframes slide-right {
+            0% { transform: translateX(-75%); }
+            100% { transform: translateX(0); }
+        }
+.about{
+    min-height: 100vh;
+    position: relative;
+    background-color: black;
+    justify-content: center;
+    text-align: center;
+    text-align: center;
+
+}
+
+
+.fade-text {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+
+.about img{
+    width: 100%;
+}
+
+#groom{
+    position: relative;
+    margin-top: 2.5rem;
+}
+
+#bride{
+     position: relative;
+    margin-top: 10rem;
+}
+
+#bride p{
+    margin-top: -10rem;
+}
+
+.about p{
+    color: white;
+    font-size: 4rem;
+     font-family: "Allura", serif;
+    margin-top: 3rem;
+}
+
+.about .content-box{
+    position: absolute;
+      bottom: 0;
+      padding: 2rem;
+      width: 100%;         
+}
+
+.about .content-box p{
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+    font-family: "Poppins", serif;
+    font-weight: 400;
+}
+
+.about .content-box h3{
+     font-family: "EB Garamond", serif;
+    font-size: 5rem;
+    color: white;
+    font-weight: bold;
+    margin-top: -1.5rem;
+}
+
+.about .content-box h4{
+     font-family: "EB Garamond", serif;
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: 2rem;
+}
+
+.ig-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.5); /* Transparan */
+    padding: 10px 20px;
+    border: 2px solid white;
+    border-radius: 20px; /* Membuat sudut membulat */
+    color: black;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none; /* Menghilangkan garis bawah pada link */
+    transition: 0.3s;
+}
+
+.ig-container:hover {
+    background: rgba(255, 255, 255, 0.3); /* Efek hover */
+}
+
+
+
+.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .hide {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+#bride .ig-container {
+    display: flex;
+    align-items: right;
+    justify-content: flex-end;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.5); /* Transparan */
+    padding: 10px 20px;
+    border: 2px solid white;
+    border-radius: 20px; /* Membuat sudut membulat */
+    color: black;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none; /* Menghilangkan garis bawah pada link */
+    transition: 0.3s;
+    
+
+}
+
+
+         .parallax {
+            position: relative;
+            overflow: hidden;
+            height: 100vh;
+            background-image: url('img/WIRAMEDAN.jpeg');
+            display: flex;
+            top: 0;
+            left: 0;
+            align-items: center;
+            justify-content: center;
+            background-size: cover;
+            background-position: center top; /* Mulai dari atas */
+            padding-top: 4rem;
+
+    
+
+
+        }
+
+        #parallax-firs{
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .parallax::before {
+            /*content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            transform: translateZ(0); 
+            will-change: transform; 
+            z-index: -1;*/
+
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+        }
+
+      
+        
+
+        .content-overlay {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            color: white;
+        }
+
+        #overlay .card {
+            position: absolute;
+            height: 60%;
+            width: 90%;
+            align-items: center;
+            background-color: rgba(26, 34, 40, 0.9);
+            color: white;
+            font-family: "Playfair Display", serif;
+            border-radius: 0 100px 0 100px;
+            padding: 20px;
+        }
+
+        #gelery #overlay .card{
+            position: absolute;
+            height: auto;
+            width: 99%;
+            align-items: center;
+            background-color: transparent;
+            color: white;
+            font-family: "Playfair Display", serif;
+            padding: 1px;
+            border-radius: 0;
+        }
+
+        #gelery #overlay .card img{
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+             
+        }
+
+        .fade-in{
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+          .fade-in.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+
+
+        #overlay .card h2 {
+            font-weight: bold;
+            font-size: 3.5rem;
+
+        }
+
+        #overlay .card p {
+            font-size: 2.3rem;
+            margin-top: 2rem;
+        }
+
+        #overlay .card .date {
+            font-size: 6rem;
+        }
+
+        #overlay .card .details {
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        #overlay button {
+            margin-top: 3rem;
+            width: 20rem;
+            font-size: 1.3rem;
+            background-color: white;
+            margin-top: 2rem;
+        }
+
+        .rsvp{
+            position: relative;
+            width: 100%;
+            font-family: "Playfair Display", serif;
+            background-color: rgba(27, 30, 31, 0.8);
+            min-height: 100vh;
+        }
+
+        #rsvp{
+            position: absolute;
+            padding: 2rem;
+            width: 100%;
+         
+        }
+
+            .rsvp::after{
+            content: '';
+             position: absolute;
+             top: 0;
+             left: 0;
+             height: 100%;
+             width: 100%;
+             background-image: url(img/WIRAMEDAN.jpeg);
+             z-index: -1;
+             /* filter: grayscale(); */
+             background-position: center;
+             background-size: cover;
+         }
+        .rsvp h2{
+            font-size: 3rem;
+            font-weight: bold;
+
+
+        }
+     
+        .rsvp .select-wrapper{
+            position: relative;
+            
+        }
+
+        .rsvp .select-wrapper i{
+            position: absolute;
+            right: 2rem;
+            top: 53%;
+            color: white;
+        }
+
+        .rsvp .select-wrapper select{
+            appearance: none; 
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        }
+
+        .rsvp .select-wrapper .status{
+            height: 3.5rem;
+            width: 100%;
+             color: rgba(255, 255, 255, 0.8);
+             border: 1px solid white;
+             padding-left: 1rem;
+             border-radius: 1rem;
+             background-color: transparent;
+             font-size: 1rem;
+
+        }
+
+       
+        .rsvp select::placeholder{
+            color: rgba(255, 255, 255, 0.7);
+            
+        }
+
+        
+        .rsvp button{
+            background-color: white;
+            width: 100%;
+            color: black;
+            border: none;
+            height: 3.5rem;
+            border-radius: 2rem;
+        }
+
+        .rsvp #ucapan{
+            height: 10rem;
+            padding: 10px 0 0 10px;
+            width: 100%;
+            background-color: transparent;
+            border: 1px solid white;
+        }
+
+        .rsvp #nama{
+            height: 3.5rem;
+            padding: 7px 0 0 10px;
+            width: 100%;
+            background-color: transparent;
+            border: 1px solid white;
+        }
+
+        .rsvp textarea::placeholder{
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .rsvp .col-12{
+            color: white;
+        }
+
+    .rsvp label{
+        font-size: 1.5rem;
+        color: white;
+    }
+    .rsvp .card{
+  background-color: transparent;
+   border-color: white;
+ height: 40rem;
+    
+}
+
+.card-header{
+    border-bottom: 1px solid white;
+}
+
+.card-body{
+    height: 18rem;
+      
+}
+
+.gift{
+    min-height: 100vh;
+    position: relative;
+    padding: 2rem;
+     background-color: rgba(27, 30, 31, 0.9);
+     font-family: "Playfair Display", serif;
+}
+
+.gift::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(img/WIRAMEDAN.jpeg);
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-size: cover;
+    background-position: center;
+}
+    .gift .card{
+    background-color: rgba(128, 128, 128, 0.5);
+    color: white;
+    padding: 3rem 0 3rem 0;
+    width: 85%;
+    border-radius: 2rem;
+
+}
+
+.gift .text-container{
+    color: white;
+    position: relative;
+}
+
+.gift .card span{
+    font-size: 2rem;
+    display: block;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+.gift h2{
+    font-size: 5rem;
+    font-weight: bold;
+}
+
+.divider{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+.gift .divider::after{
+    content: '';
+   display: block;
+    position: absolute;
+    width: 80%;
+    margin-left: 10%;
+    height: 2px;
+    background: white;
+    z-index: 9999;
+}
+.gift #gift{ 
+    font-size: 5rem;
+    font-weight: bold;
+    color: goldenrod;
+    height: 5rem;
+    display: block;
+    margin-top: -1rem;
+}
+
+
+
+.gift .card h3{
+    font-size: 2.5rem;
+
+    
+}
+
+.gift .card p{
+    font-size: 1rem;
+    background-color: rgba(27, 30, 31, 0.9);
+    padding: 1rem;
+    width: 15rem;
+    color: white;
+    border-radius: 2rem;
+    
+}
+
+.gift .card img{
+    width: 20rem;
+}
+
+
+.gift .card .row{
+    margin-top: 2rem;
+}
+
+
+
+
+
+ #close{
+/*        background-color: rgba(255, 255, 255, 1);*/
+background-color: black;
+       padding: 1rem;
+       position:    relative    ;
+    }
+
+    
+#close h2{
+    font-size: 3rem;
+    color: white;
+    font-family: "Playfair Display", serif;
+    font-weight: bold;
+
+}
+
+#close span {
+    font-size: 3rem;
+    color: yellow;
+    font-family: "Playfair Display", serif;
+}
+
+.end{
+    position: relative;
+    background-color: white;
+   
+   
+}
+
+        .end::before{
+            content: '';
+             position: absolute;
+             top: 0;
+             left: 0;
+             height: 100%;
+             width: 100%;
+             background-color: rgba(0, 0, 0, 0.5);
+             z-index: 999;
+             
+         }
+        .slider-container {
+            width: 100%; 
+            overflow: hidden;
+            background: #f8f9fa;
+            padding: 10px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .end-slider {
+            display: flex;
+            gap: 10px;
+            transition: transform 18s ease-out; /* Transisi melambat */
+        }
+
+        .end-slider img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+            flex-shrink: 0;
+        }
+
+
+
+  /*      .slider-container span{
+            position: absolute;
+                bottom: 5rem;
+                z-index: 999;
+                color: white;
+                font-size: 4rem;
+                font-family: "Playfair Display", serif;
+
+            }
+*/
+            .end .text-container {
+            background: linear-gradient(to top, rgba(0, 0, 0, 1), transparent);
+            padding: 20px;
+            text-align: center;
+            position: absolute;
+            z-index: 999;
+            bottom: 1rem;
+            width: 100%;
+
+        }
+
+        .text-container h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            color: white;
+            margin: 0;
+        }
+
+        .end .divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 5px;
+        }
+
+        .end .divider::before,
+        .end .divider::after {
+            content: "";
+            width: 50px;
+            height: 2px;
+            background: white;
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        .heart {
+            font-size: 16px;
+            color: white;
+        }
+        
+
+.audio-icon-wrapper{
+    width: 4rem;
+    height: 4rem;
+    font-size: 4rem;
+    position: fixed;
+    bottom: 2.5rem;
+    right: 2rem;
+    cursor: pointer;
+    color: white;
+    opacity: 0.5;
+    mix-blend-mode: difference;
+    animation: rotating 4s linear infinite;
+    transform-origin: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 0;
+    z-index: 9999;
+}
+
+@keyframes rotating{
+    form{
+        transform: rotate(0);
+    }
+to{
+    transform: rotate(360deg);
+    }
+}
+
+
+
+
+
+
+
+/* media query */
+
+/* Extra large */
+@media (max-width :1200px){
+    .home .heart{
+        transform: translateX(-50%) translateY(45px);
+    }
+}
+/* lapotp */
+@media (max-width :992px){
+    html{
+        font-size: 75%;
+    }
+    .simply-countdown-circle > .simply-section {
+        padding: 70px;
+    }
+    .home .heart{
+        display: none;
+    }
+    .timeline::before{
+        left: 60px;
+    }
+
+    .timeline li .timeline-img{
+        left: 15px;
+        margin-left: 45px;
+        top: 16px;
+    }
+    .timeline li .timeline-panel{
+        width: calc((100% - 200px));
+        float: right;
+        
+    }
+    .timeline li .timeline-panel::before{
+        border-left-width: 0;
+        border-right-width: 15px;
+        left: -15px;
+        right: auto;
+    }
+    .timeline li .timeline-panel::after{
+        border-left-width: 0;
+        border-right-width: 14px;
+        left: -13px;
+        right: auto;
+    }
+    .timeline li .timeline-img{
+        width: 140px;
+        height: 140px;
+    }
+}
+/* table */
+@media (max-width :768px){
+    html{
+        font-size: 65%;
+    }
+    .simply-countdown-circle > .simply-section {
+        padding: 60px;
+        /* margin: 3px; */
+        width: 50px;
+        height: 50px;
+    }
+    .mynavbar .nav-link{
+        font-size: 2rem;
+        text-align: center;
+    }
+    .home .heart{
+        display: none;
+    }
+
+    .sticky-top{
+        overflow: hidden;
+
+    }
+    .timeline li .timeline-img{
+        width: 140px;
+        height: 140px;
+    }
+    .parallax {
+        background-attachment: scroll;
+}
+/* phone */
+@media (max-width :576px){
+    html{
+        font-size: 60%;
+    } 
+     .parallax {
+        background-attachment: scroll;
+
+    }
+    #slider-right{
+        margin-top: 1rem;
+    }
+  
+
+    .home   {
+        position: relative;
+        min-height: 100vh; 
+    }
+
+    .card-body{
+    height: 40rem;
+
+
+}
+
+    
+ 
+}
