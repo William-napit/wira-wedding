@@ -3,49 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parallax Effect</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Wedding Event</title>
     <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            overflow-x: hidden;
-            font-family: Arial, sans-serif;
-        }
-
         .parallax {
-            position: relative;
-            height: 100vh;
-            background-size: cover;
             background-attachment: fixed;
+            background-size: cover;
             background-position: center;
-        }
-
-        .parallax-1 { background-image: url('https://source.unsplash.com/1600x900/?nature'); }
-        .parallax-2 { background-image: url('https://source.unsplash.com/1600x900/?mountains'); }
-        .parallax-3 { background-image: url('https://source.unsplash.com/1600x900/?forest'); }
-
-        .content {
-            text-align: center;
-            padding: 50px;
-            background: #fff;
         }
     </style>
 </head>
-<body>
-    <div class="parallax parallax-1"></div>
-    <div class="content">
-        <h2>Welcome to Parallax Scrolling</h2>
-        <p>Scroll down to see the effect.</p>
+<body class="bg-gray-100">
+
+
+
+    <div class="relative w-full h-screen overflow-hidden parallax" style="background-image: url('img/WIRAMEDAN.jpeg');">
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+        
+        <!-- Text Content -->
+        <div class="relative z-10 flex flex-col justify-center items-center h-full text-white text-center p-6">
+            <h2 class="text-lg uppercase tracking-wide">The Bride</h2>
+            <h1 class="text-3xl font-bold">William Napitpuu</h1>
+            <p class="mt-2 text-sm">lloran dfasdf</p>
+            <a href="#" class="mt-4 bg-white text-black px-4 py-2 rounded-full text-sm">@yessica_rifa</a>
+        </div>
     </div>
-    <div class="parallax parallax-2"></div>
-    <div class="content">
-        <h2>Beautiful Mountains</h2>
-        <p>This section contains more content.</p>
+    
+    <!-- Wedding Event Section -->
+    <div class="bg-black text-white py-12 text-center">
+        <h2 class="text-3xl font-bold">WEDDING <span class="text-yellow-500">EVENT</span></h2>
     </div>
-    <div class="parallax parallax-3"></div>
-    <div class="content">
-        <h2>End of Parallax</h2>
-        <p>Hope you enjoyed the scrolling effect.</p>
+    
+    <!-- Second Parallax Section -->
+    <div class="relative w-full h-screen parallax" style="background-image: url('img/mdr.jpeg');">
+        <div class="absolute inset-0 bg-black bg-opacity-30"></div>
     </div>
+    
+    <!-- Third Parallax Section -->
+    <div class="relative w-full h-screen parallax" style="background-image: url('img/jeruk.jpeg');">
+        <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+    </div>
+
+
+    
 </body>
 </html>
